@@ -1,0 +1,131 @@
+/* Header Styles */
+.header {
+  background-color: white; /* White background for the header */
+  padding: 10px 20px; /* Padding for spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  position: sticky; /* Ensure header stays on top */
+  top: 0;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Align header content properly */
+.header-content {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align to the left */
+  width: 100%; /* Ensure full width for alignment */
+  gap: 20px; /* Spacing between dropdowns */
+}
+
+/* Dropdown container alignment */
+.dropdown-container {
+  position: relative;
+  margin-right: 20px; /* Add spacing between dropdown and other content */
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  justify-content: flex-start; /* Ensure content is aligned to the left */
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px; /* Ensure consistent font size */
+}
+
+/* Dropdown toggle hover effect */
+.dropdown-toggle:hover {
+  background-color: #f4f4f4; /* Light background on hover */
+}
+
+/* Dropdown Icon spacing */
+.dropdown-toggle img {
+  margin-left: 8px; /* Space between text and icon */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px); /* Place dropdown slightly below the button */
+  left: 0; /* Align dropdown to the left */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Adjust width for better layout */
+  z-index: 1000;
+}
+
+/* Dropdown Sections */
+.dropdown-section {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the heading and button */
+  gap: 10px; /* Spacing between elements */
+}
+
+/* Dropdown Heading */
+.dropdown-section h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Dropdown List Styles */
+.nested-dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nested-dropdown li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #333; /* Default text color */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nested-dropdown li:hover,
+.nested-dropdown li.selected {
+  background-color: #f0f0f0; /* Highlighted background */
+  color: #000; /* Text color on hover or selected */
+  font-weight: bold; /* Make the text bold on hover/selected */
+}
+
+/* Dropdown Button in Section */
+.dropdown-section .dropdown-toggle {
+  padding: 5px 10px;
+  font-size: 12px; /* Smaller font for dropdowns inside sections */
+  font-weight: normal;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown-section .dropdown-toggle:hover {
+  background-color: #f4f4f4; /* Light background on hover */
+}
+
+/* Dropdown Icon within Button */
+.dropdown-section .dropdown-toggle img {
+  margin-left: 8px; /* Space between text and icon */
+}
+
+/* Add spacing between sections */
+.dropdown-section + .dropdown-section {
+  margin-top: 10px;
+}

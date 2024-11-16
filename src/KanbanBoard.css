@@ -1,0 +1,160 @@
+/* Main container for the Kanban board */
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto; /* Allows horizontal scrolling if necessary */
+  }
+  
+  /* Styles for each column */
+  .column {
+    background-color: #f4f5f7;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+ /* Header of each column */
+.column-header {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between title and icons */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  padding: 0 10px; /* Adjust padding for consistent spacing */
+  gap: 8px; /* Space between title and icons */
+}
+
+/* Title and icon alignment */
+.column-header img {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-right: 8px; /* Space between icon and title */
+}
+
+/* Quantity Count Styling */
+.column-header .ticket-count {
+  font-size: 12px;
+  color: #666;
+  margin-left: auto;
+  margin-right: 10px; /* Add space before the icons */
+  font-weight: 500; /* Subtle font weight for count */
+}
+
+/* Wrapper for the icons (add and three-dot) */
+.column-header .icon-wrapper {
+  display: flex;
+  align-items: center; /* Vertically align the icons */
+  gap: 12px; /* Space between the icons */
+}
+
+/* Style for the icons (add and three-dot) */
+.column-header .icon-wrapper img {
+  width: 24px; /* Slightly larger icon size */
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 5px; /* Add padding for a more clickable area */
+  border-radius: 50%; /* Round icon for a cleaner look */
+  background-color: #f9f9f9; /* Subtle background for contrast */
+}
+
+/* Hover effect for the icons */
+.column-header .icon-wrapper img:hover {
+  opacity: 0.85; /* Slight opacity change for hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+  
+  
+  /* Styling for the tickets within each column */
+  .ticket-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Additional ticket card styling (optional) */
+  .ticket-card h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ticket-card p {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  /* Status and priority indicator styles */
+  .ticket-card .priority,
+  .ticket-card .status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .ticket-card .priority.urgent {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .ticket-card .priority.high {
+    background-color: #ffcc00;
+    color: white;
+  }
+  
+  .ticket-card .priority.medium {
+    background-color: #ffbf00;
+    color: white;
+  }
+  
+  .ticket-card .priority.low {
+    background-color: #4dff4d;
+    color: white;
+  }
+  
+  .ticket-card .status.todo {
+    background-color: #f5a623;
+    color: white;
+  }
+  
+  .ticket-card .status.inprogress {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .ticket-card .status.done {
+    background-color: #7ed321;
+    color: white;
+  }
+  
+  .ticket-card .status.cancelled {
+    background-color: #d0021b;
+    color: white;
+  }
+  
+  /* Add a shadow effect to the columns */
+  .column {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .column-header .ticket-count {
+    font-size: 14px; /* Increased font size */
+    color: #666;
+    margin-left: auto;
+    margin-right: 10px; /* Add space before the icons */
+    font-weight: 600; /* Slightly bolder text */
+}
